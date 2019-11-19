@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Game Point@RPS</title>
+        <link rel="stylesheet" href="/css/disp.css">
+    </head>
+    <body>
+        <div class="head">
+            <h1 id="header">Rock Paper Scissor</h1>
+            <h2 id="header">Gameplay History</h2>
+        </div>
+        <div class="body">
+            <div class="search" id="search">
+            </div>
+            <div class="back">
+                <a href="/" class="backlink">BACK TO GAME</a>
+            </div>
+            {{#if has}}
+                <table id="scores">
+                        <tr id="list1" class="list1">
+                            <th id="name" class="list">NAME</td>
+                            <th id="score1" class="list">SCORE</td>
+                            <th id="score2" class="list">OPPONENT SCORE</td>
+                            <th id="result" class="list">RESULT</td>
+                        </tr>
+                    {{#each user}}
+                        <tr id="list1" class="list1">
+                            <td id="name" class="list">{{this.name}}</td>
+                            <td id="score1" class="list">{{this.score1}}</td>
+                            <td id="score2" class="list">{{this.score2}}</td>
+                            <td id="result" class="list">{{this.result}}</td>
+                        </tr>
+                    {{/each}}
+                </table>
+                {{else}}
+                        <h1 id="no">NO Record Found</h1>
+            {{/if}}
+        </div>
+        <div class="footer">
+            <h3>Website created by</h3>
+                <h2>Srajan Gupta</h2>
+                <h3>&copy; Srajan</h3>
+        </div>
+    </body>
+</html>
