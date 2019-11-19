@@ -1,0 +1,86 @@
+<!-- DARK THEME VERSION -->
+<html>
+    <head>
+            <title>Rock Paper Scissor Game</title>
+            <link rel="stylesheet" href="/css/disp.css" type="text/css">
+    </head>
+    <body>
+        <div class="head">
+            <h1 id="header">Rock Paper Scissor</h1>
+        </div>
+        <div class="scorecard">
+            <table id="scores">
+                <tr>
+                    <th id="player" class="username">User</th>
+                    <th id="player">COMPUTER</th>
+                </tr>
+                <tr>
+                    <td id="score" class="user">0</td>
+                    <td id="score" class="comp">0</td>
+                </tr>
+            </table>
+        </div>
+        <div class="rules">
+            <h2 id="rule">Rules Of The Game are: </h2>
+            <ul type="circle" id="rule_list">
+                <li>You will have 5 chances to play</li>
+                <li>First you will get a chance to select your choice.</li>
+                <li>Next, the choice will be made by computer.</li>
+                <li>Both choices will remain hidden from one another.</li>
+                <li>After completion of 5 games, the final result will be on the screen.</li>
+                <li>Winning criteria: 
+                    <ul type="square">
+                        <li>If anyone chooses stone, then he can only win if the other player has chosen scissor</li>
+                        <li>If any player chooses paper, he can win only if other player choses stone</li>
+                        <li>If any player chooses scissor, he can win only if other player choses paper</li>
+                        <li>In case of same choice, the result will be draw</li>
+                    </ul>
+                </li>
+            </ul>
+            <br/>
+            <input type="checkbox" id="read" value="1">I have read the rules carefully
+            <br/>
+            <div class="hid">
+                 Please Enter Your name:<br/>
+                <input type="text" name="name" id="uname" class="uname">
+                <br/>
+                <input type="button" name="play" value="Continue to Game" id="but" class="but">
+            </div>
+        </div>
+        <div class="game">
+            <div class="result">
+            </div>
+            <div class="draw1"></div>
+            <div class="draw2"></div>
+            <div class="buttons">
+                <br/>
+                <br/>
+                <button id="rock" class="selector">ROCK</button>
+                <button id="paper" class="selector">PAPER</button>
+                <button id="scissor" class="selector">SCISSOR</button>
+            </div>
+        </div>
+        <br/>
+        <div class="history">
+            <table id="his">
+                <tr>
+                    <th id="his_h">Game No</th>
+                    <th id="his_h">User's Choice</th>
+                    <th id="his_h">Computer's Choice</th>
+                    <th id="his_h">Result</th>
+                </tr>
+            </table>
+        </div>
+        <form name="datasend" method="post" action="">
+        <input type="text" value="" name="user" id="users" hidden>
+        <input type="text" value="" name="score1" id="score1" hidden>
+        <input type="text" value="" name="score2" id="score2" hidden>
+        </form>
+    <div class="footer">
+        <h3>Website created by</h3>
+            <h2>Srajan Gupta</h2>
+            <h3>&copy; Srajan</h3>
+    </div>
+    </body>
+    <script src="/js/app.js"></script>
+</html>
